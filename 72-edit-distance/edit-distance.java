@@ -13,7 +13,7 @@ class Solution {
             for(int j=1;j<=m;j++){
                 char s=word1.charAt(i-1);
                 char p=word2.charAt(j-1);
-                if(word1.charAt(i-1)==word2.charAt(j-1)){
+                if(s==p){
                     dp[i][j]=dp[i-1][j-1];
                 }else{
                     int insert=dp[i][j-1];
