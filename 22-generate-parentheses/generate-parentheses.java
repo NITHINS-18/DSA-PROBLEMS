@@ -6,11 +6,15 @@ class Solution {
             ans.add(s);
             return;
         }
-        if (open < n) {
-            generate(open + 1, close, n, s + "(", ans);
+      if (s.length() == 2 * n) {
+            ans.add(s);
+            return;
         }
-        if (close < open) {
-            generate(open, close + 1, n, s + ")", ans);
+        if(open<n){
+            generate(open+1,close,n,s+"(",ans);
+        }
+        if(close<open){
+            generate(open,close+1,n,s+")",ans);
         }
     }
     public List<String> generateParenthesis(int n) {
