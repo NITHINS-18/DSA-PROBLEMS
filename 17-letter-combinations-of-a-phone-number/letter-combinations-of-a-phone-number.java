@@ -6,9 +6,9 @@ class Solution {
         }
         String letters=map[digits.charAt(index)-'0'];
         for(int i=0;i<letters.length();i++){
-            //  cs+=letters.charAt(i);
-              solve(index+1,cs+letters.charAt(i),ans,digits,map);
-              //cs=cs.substring(0,cs.length()-1);
+             cs+=letters.charAt(i);
+              solve(index+1,cs,ans,digits,map);
+              cs=cs.substring(0,cs.length()-1);
         }
     }
     public List<String> letterCombinations(String digits) {
